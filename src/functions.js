@@ -4,9 +4,9 @@ const condition = () => {
     console.log('Answer "yes" if the number is even, otherwise answer "no".')
 }
 
-const question = () => {
+const question = (name) => {
     for (let i = 0; i < 3; i++) {
-        let number = Math.floor(Math.random() * 10)
+        let number = Math.floor(Math.random() * (100 - 1) + 1)
         let correctAnswer = 'yes'
         if (number % 2 === 0) {
             correctAnswer = 'yes'
@@ -18,8 +18,8 @@ const question = () => {
         if (answer === correctAnswer) {
             console.log('Correct!')
         }
-        else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet\'s try again, `)
-        if (i === 2) { console.log(`Congratulations, `) }
+        else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet\'s try again, ${name}`)
+        if (i === 2) { console.log(`Congratulations, ${name}`) }
     }
 }
 

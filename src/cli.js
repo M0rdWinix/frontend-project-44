@@ -1,7 +1,9 @@
 import readlineSync from 'readline-sync'
 
-export default () => {
-  const mainName = readlineSync.question('May I have your name? ')
-
-  console.log(`Hello, ${mainName}!`)
+const getName = () => {
+  const gameName = readlineSync.question('May I have your name? ')
+  console.log(`Hello, ${gameName}!`)
+  return gameName
 }
+
+export { getName }
