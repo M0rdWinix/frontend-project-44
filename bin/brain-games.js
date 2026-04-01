@@ -5,10 +5,8 @@ import { condition, question } from '../src/functions.js'
 function app() {
   console.log('Welcome to the Brain Games!')
 
-    const name = getName()
-    
   condition()
-  question(name)
+  question(getName())
 }
 
 app()

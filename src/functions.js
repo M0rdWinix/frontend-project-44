@@ -23,4 +23,19 @@ const question = (name) => {
     }
 }
 
+const calculate = () => {
+        let firstNumber = Math.floor(Math.random())
+
+
+
+
+        console.log(`Question: ${}`)
+        const answer = readlineSync.question('Your answer: ')
+        if (answer === correctAnswer) {
+            console.log('Correct!')
+        }
+        else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet\'s try again, ${name}`)
+        if (i === 2) { console.log(`Congratulations, ${name}`) }
+}
+
 export { condition, question }
