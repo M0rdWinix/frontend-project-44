@@ -1,10 +1,8 @@
 import readlineSync from 'readline-sync'
 
-const condition = () => {
-    console.log('Answer "yes" if the number is even, otherwise answer "no".')
-}
-
 const question = (name) => {
+    console.log('Answer "yes" if the number is even, otherwise answer "no".')
+
     for (let i = 0; i < 3; i++) {
         let number = Math.floor(Math.random() * (100 - 1) + 1)
         let correctAnswer = 'yes'
@@ -23,19 +21,62 @@ const question = (name) => {
     }
 }
 
-const calculate = () => {
-        let firstNumber = Math.floor(Math.random())
+const calculate = (name) => {
+    console.log('What is the result of the expression?')
 
+    let operations = ['+', '-', '*']
+    let correctAnswer
 
+    for (let i = 0; i < 3; i++) {
+        let firstNumber = Math.floor(Math.random() * (100 - 1) + 1)
+        let secondNumber = Math.floor(Math.random() * (100 - 1) + 1)
 
+        let randomOperations = operations[Math.floor(Math.random() * operations.length)]
 
-        console.log(`Question: ${}`)
+        if (randomOperations === '+') {
+            correctAnswer = correctAnswer = firstNumber + secondNumber
+        } else if (randomOperations === '-') {
+            correctAnswer = correctAnswer = firstNumber - secondNumber
+        } else if (randomOperations === '*') {
+            correctAnswer = correctAnswer = firstNumber * secondNumber
+        }
+
+        console.log(`Question: ${firstNumber} ${randomOperations} ${secondNumber}`)
         const answer = readlineSync.question('Your answer: ')
-        if (answer === correctAnswer) {
+        if (Number(answer) === correctAnswer) {
             console.log('Correct!')
         }
         else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet\'s try again, ${name}`)
         if (i === 2) { console.log(`Congratulations, ${name}`) }
+    }
 }
 
-export { condition, question }
+const gcd = (name) => {
+    console.log('Find the greatest common divisor of given numbers.')
+
+    let correctAnswer
+
+    for (let i = 0; i < 3; i++) {
+        let firstNumber = Math.floor(Math.random() * (100 - 0) + 0)
+        let secondNumber = Math.floor(Math.random() * (100 - 0) + 0)
+
+        console.log(`Question: ${firstNumber} ${secondNumber}`)
+
+        if (secondNumber === 0) {
+            correctAnswer = firstNumber
+        } else while (secondNumber !== 0) {
+            let saveSecond = secondNumber
+            secondNumber = firstNumber % secondNumber
+            firstNumber = saveSecond
+        } correctAnswer = firstNumber
+
+        const answer = readlineSync.question('Your answer: ')
+        if (Number(answer) === correctAnswer) {
+            console.log('Correct!')
+        }
+        else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet\'s try again, ${name}`)
+        if (i === 2) { console.log(`Congratulations, ${name}`) }
+    }
+}
+
+export { question, calculate, gcd }
