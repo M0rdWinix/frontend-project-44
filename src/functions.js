@@ -65,9 +65,9 @@ const gcd = (name) => {
         if (secondNumber === 0) {
             correctAnswer = firstNumber
         } else while (secondNumber !== 0) {
-            let saveSecond = secondNumber
+            let save = secondNumber
             secondNumber = firstNumber % secondNumber
-            firstNumber = saveSecond
+            firstNumber = save
         } correctAnswer = firstNumber
 
         const answer = readlineSync.question('Your answer: ')
@@ -79,4 +79,23 @@ const gcd = (name) => {
     }
 }
 
-export { question, calculate, gcd }
+const progression = () => {
+    let start = Math.floor(Math.random() * 11)
+    let index = Math.floor(Math.random() * (6 - 1) + 1)
+    let step = Math.floor(Math.random() * (6 - 1) + 1)
+    let length = Math.floor(Math.random() * (11 - 5) + 5)
+    let hiddenItem = Math.floor(Math.random() * (length - 0) + 0)
+    const result = []
+
+    for (let i = 0; i < length; i++) {
+        let currentElement = start + index * step
+        result.push(currentElement)
+        index += step   
+    }   
+    console.log(result)
+
+    result[hiddenItem] = '..'
+
+    
+}
+export { question, calculate, gcd, progression }
