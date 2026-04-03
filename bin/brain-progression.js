@@ -4,7 +4,7 @@ import { progression } from '../src/functions.js'
 
 function app() {
   console.log('Welcome to the Brain Games!')
-  progression()
+  progression(getName())
 }
 
 app()
