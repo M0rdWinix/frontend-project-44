@@ -18,7 +18,8 @@ export default (name) => {
           if (number % i === 0) {
             correctAnswer = 'no'
             break
-          } i += 2
+          }
+          else i += 2
         }
       }
     }
@@ -29,6 +30,8 @@ export default (name) => {
       console.log('Correct!')
     }
     else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`)
-    if (i === 2) { console.log(`Congratulations, ${name}!`) }
+    if (i === 2) {
+      console.log(`Congratulations, ${name}!`)
+    }
   }
 }
