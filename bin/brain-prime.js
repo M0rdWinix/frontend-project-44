@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import { getName } from '../src/cli.js'
-import { prime } from '../src/functions.js'
+import { primeGame } from '../src/games/index.js'
 
 function app() {
   console.log('Welcome to the Brain Games!')
-  prime()
+  primeGame(getName())
 }
 
 app()

@@ -1,11 +1,10 @@
 #!/usr/bin/env node
 import { getName } from '../src/cli.js'
-import { gcd } from '../src/functions.js'
+import { gcdGame } from '../src/games/index.js'
 
 function app() {
   console.log('Welcome to the Brain Games!')
-
-  gcd(getName())
+  gcdGame(getName())
 }
 
 app()

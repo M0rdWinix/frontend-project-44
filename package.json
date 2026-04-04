@@ -26,7 +26,8 @@
     "brain-prime": "bin/brain-prime.js"
   },
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "readlinesyn": "^0.3.2"
   },
   "devDependencies": {
     "@eslint/create-config": "^1.11.0",

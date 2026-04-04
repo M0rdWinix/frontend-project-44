@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 import { getName } from '../src/cli.js'
-import { progression } from '../src/functions.js'
+import { progressionGame } from '../src/games/index.js'
 
 function app() {
   console.log('Welcome to the Brain Games!')
-  progression(getName())
+  progressionGame(getName())
 }
 
 app()
