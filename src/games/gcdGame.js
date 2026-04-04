@@ -18,13 +18,14 @@ export default (name) => {
       let save = secondNumber
       secondNumber = firstNumber % secondNumber
       firstNumber = save
-    } correctAnswer = firstNumber
+    } 
+    correctAnswer = firstNumber
 
     const answer = readlineSync.question('Your answer: ')
     if (Number(answer) === correctAnswer) {
       console.log('Correct!')
     }
-    else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet\'s try again, ${name}`)
+    else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}`)
     if (i === 2) { console.log(`Congratulations, ${name}`) }
   }
 }

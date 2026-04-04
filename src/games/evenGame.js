@@ -6,17 +6,16 @@ export default (name) => {
   for (let i = 0; i < 3; i++) {
     let number = Math.floor(Math.random() * (100 - 1) + 1)
     let correctAnswer = 'yes'
-    if (number % 2 === 0) {
-      correctAnswer = 'yes'
+    if (number % 2 !== 0) {
+      correctAnswer = 'no'
     }
-    else correctAnswer = 'no'
 
     console.log(`Question: ${number}`)
     const answer = readlineSync.question('Your answer: ')
     if (answer === correctAnswer) {
       console.log('Correct!')
     }
-    else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet\'s try again, ${name}`)
+    else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}`)
     if (i === 2) { console.log(`Congratulations, ${name}`) }
   }
 }

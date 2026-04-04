@@ -13,13 +13,13 @@ export default (name) => {
     let randomOperations = operations[Math.floor(Math.random() * operations.length)]
 
     if (randomOperations === '+') {
-      correctAnswer = correctAnswer = firstNumber + secondNumber
+      correctAnswer = firstNumber + secondNumber
     }
     else if (randomOperations === '-') {
-      correctAnswer = correctAnswer = firstNumber - secondNumber
+      correctAnswer = firstNumber - secondNumber
     }
     else if (randomOperations === '*') {
-      correctAnswer = correctAnswer = firstNumber * secondNumber
+      correctAnswer = firstNumber * secondNumber
     }
 
     console.log(`Question: ${firstNumber} ${randomOperations} ${secondNumber}`)
@@ -27,7 +27,7 @@ export default (name) => {
     if (Number(answer) === correctAnswer) {
       console.log('Correct!')
     }
-    else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet\'s try again, ${name}`)
+    else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}`)
     if (i === 2) { console.log(`Congratulations, ${name}`) }
   }
 }
