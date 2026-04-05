@@ -1,5 +1,7 @@
-[![asciicast](https://asciinema.org/a/Tz36hUZRTomI5nJR.svg)](https://asciinema.org/a/Tz36hUZRTomI5nJR)
-[![asciicast](https://asciinema.org/a/Tz36hUZRTomI5nJR.svg)](https://asciinema.org/a/Tz36hUZRTomI5nJR)
+[![asciicast](https://asciinema.org/a/bRdmt6TYA7guMQsl.svg)](https://asciinema.org/a/bRdmt6TYA7guMQsl)
+[![asciicast](https://asciinema.org/a/DcDPyVwUrPHYHyzL.svg)](https://asciinema.org/a/DcDPyVwUrPHYHyzL)
+
+[![asciicast](https://asciinema.org/a/14l5DBgHZOEcaw0c.svg)](https://asciinema.org/a/14l5DBgHZOEcaw0c)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/M0rdWinix/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/M0rdWinix/frontend-project-44/actions)
