@@ -21,7 +21,6 @@ export default (name) => {
       }
     }
 
-
     console.log(`Question: ${number}`)
     const answer = readlineSync.question(`Your answer: `)
     if (answer === correctAnswer) {
