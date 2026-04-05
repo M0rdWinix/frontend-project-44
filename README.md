@@ -2,6 +2,7 @@
 [![asciicast](https://asciinema.org/a/DcDPyVwUrPHYHyzL.svg)](https://asciinema.org/a/DcDPyVwUrPHYHyzL)
 
 [![asciicast](https://asciinema.org/a/14l5DBgHZOEcaw0c.svg)](https://asciinema.org/a/14l5DBgHZOEcaw0c)
+[![asciicast](https://asciinema.org/a/IzHDQPIzRy2vJHpJ.svg)](https://asciinema.org/a/IzHDQPIzRy2vJHpJ)
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/M0rdWinix/frontend-project-44/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/M0rdWinix/frontend-project-44/actions)
