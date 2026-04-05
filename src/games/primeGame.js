@@ -13,16 +13,14 @@ export default (name) => {
       }
       else if (number % 2 !== 0 && number >= 3) {
         const sqrt = Math.floor(Math.sqrt(number))
-        let i = 3
-        while (3 <= i && i < sqrt) {
-          if (number % i === 0) {
+        for (let j = 3; j <= sqrt; j += 2) {
+          if (number % j === 0) {
             correctAnswer = 'no'
-            break
           }
-          else i += 2
         }
       }
     }
+
 
     console.log(`Question: ${number}`)
     const answer = readlineSync.question(`Your answer: `)
