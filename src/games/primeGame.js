@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync'
+import { quest } from './index.js'
 
 export default (name) => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".')
@@ -21,14 +21,8 @@ export default (name) => {
       }
     }
 
-    console.log(`Question: ${number}`)
-    const answer = readlineSync.question(`Your answer: `)
-    if (answer === correctAnswer) {
-      console.log('Correct!')
-    }
-    else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`)
-    if (i === 2) {
-      console.log(`Congratulations, ${name}!`)
+    if (quest(number, correctAnswer, i, name) === false) {
+      return
     }
   }
 }

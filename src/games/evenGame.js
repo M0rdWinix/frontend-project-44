@@ -1,4 +1,4 @@
-import readlineSync from 'readline-sync'
+import { quest } from './index.js'
 
 export default (name) => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".')
@@ -9,15 +9,8 @@ export default (name) => {
     if (number % 2 !== 0) {
       correctAnswer = 'no'
     }
-
-    console.log(`Question: ${number}`)
-    const answer = readlineSync.question('Your answer: ')
-    if (answer === correctAnswer) {
-      console.log('Correct!')
-    }
-    else return console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \nLet's try again, ${name}!`)
-    if (i === 2) {
-      console.log(`Congratulations, ${name}!`)
+    if (quest(number, correctAnswer, i, name) === false) {
+      return
     }
   }
 }

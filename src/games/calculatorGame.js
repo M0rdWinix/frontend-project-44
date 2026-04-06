@@ -1,5 +1,4 @@
-import readlineSync from 'readline-sync'
-import 
+import { quest } from './index.js'
 
 export default (name) => {
   console.log('What is the result of the expression?')
@@ -22,7 +21,9 @@ export default (name) => {
     else if (randomOperations === '*') {
       correctAnswer = firstNumber * secondNumber
     }
-    
-    quest(${firstNumber} ${randomOperations} ${secondNumber})
+
+    if (quest(`${firstNumber} ${randomOperations} ${secondNumber}`, String(correctAnswer), i, name) === false) {
+      return
+    }
   }
 }
